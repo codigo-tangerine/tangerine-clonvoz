@@ -1,0 +1,91 @@
+[
+  {
+    "label": "Natural / Conversacional",
+    "scripts": [
+      "Hoy quería contarte algo de una forma simple, como si estuviéramos charlando tranquilos. A veces uno tiene muchas cosas en la cabeza y necesita ordenar una idea antes de decidir. Yo prefiero escuchar, pensar un momento y después hablar claro. Si algo me entusiasma se nota, y si no estoy segura también lo digo. Para mí, sonar natural siempre es más importante que sonar perfecto.",
+      "Mirá, te cuento cómo lo veo. Cuando aparece una idea nueva, primero trato de entender qué quiero hacer y qué parte realmente vale la pena. Después voy probando, ajustando y cambiando lo que haga falta. No necesito que todo salga impecable a la primera; me interesa que tenga sentido, que se entienda y que al final se sienta como algo propio."
+    ],
+    "hint": "Hablar como en una charla real. Buen baseline de identidad.",
+    "id": "natural"
+  },
+  {
+    "label": "Comercial / Venta",
+    "scripts": [
+      "Si estás buscando una opción práctica, cuidada y pensada para vos, esta puede ser una muy buena oportunidad. La idea es que puedas elegir con tranquilidad, entender cada detalle y obtener un resultado que realmente te sirva. Consultanos, contanos qué necesitás y te ayudamos a encontrar la alternativa adecuada. Queremos que la experiencia sea simple desde el primer mensaje hasta el resultado final.",
+      "Hay momentos en los que un pequeño cambio hace una diferencia enorme. Por eso preparamos una propuesta clara, accesible y fácil de adaptar a lo que necesitás. Podés conocer las opciones, comparar alternativas y resolver tus dudas antes de decidir. Nuestro objetivo es que tengas una experiencia ágil, cercana y con un resultado que sientas hecho especialmente para vos."
+    ],
+    "hint": "Energía positiva, claridad y intención persuasiva sin sobreactuar.",
+    "id": "commercial"
+  },
+  {
+    "label": "Historia / Narración",
+    "scripts": [
+      "La lluvia había empezado antes del amanecer y todavía golpeaba despacio contra las ventanas. Cuando abrió la puerta, encontró una caja pequeña sobre el piso, envuelta en un papel viejo y sin ninguna nota. La llevó hasta la mesa, la miró durante unos segundos y recién entonces decidió abrirla. Adentro había una fotografía que estaba segura de no haber visto nunca, aunque reconoció inmediatamente el lugar.",
+      "Esa tarde el pueblo parecía más silencioso de lo normal. Las persianas estaban bajas y apenas se escuchaba el viento entre los árboles. Al llegar a la plaza vio una bicicleta apoyada junto a la fuente, exactamente igual a la que había tenido cuando era chica. Se acercó pensando que era una coincidencia, pero en el manubrio encontró una cinta azul con su nombre escrito a mano."
+    ],
+    "hint": "Ritmo narrativo, pausas naturales y cambios suaves de intención.",
+    "id": "story"
+  },
+  {
+    "label": "Emocionado / Entusiasta",
+    "scripts": [
+      "No sabés las ganas que tenía de contarte esto. Después de darle tantas vueltas, finalmente salió y quedó muchísimo mejor de lo que imaginaba. Cuando vi el resultado por primera vez me quedé mirando la pantalla como una tonta, porque de verdad no esperaba que funcionara tan bien. Ahora quiero probar otras ideas, cambiar algunas cosas y ver hasta dónde podemos llevarlo.",
+      "Estoy realmente feliz con lo que pasó hoy. Veníamos trabajando hace bastante, probando una cosa, descartando otra y corrigiendo detalles, y de golpe todo empezó a encajar. Fue ese momento en el que mirás el resultado y decís: sí, era por acá. Todavía quedan cosas para mejorar, claro, pero ahora tengo unas ganas enormes de seguir y hacer la próxima versión."
+    ],
+    "hint": "Entusiasmo real, velocidad un poco mayor y sonrisas audibles.",
+    "id": "excited"
+  },
+  {
+    "id": "creator",
+    "label": "Creador de contenido / Energía alta",
+    "hint": "Arrancá con una sonrisa audible. Proyectá la voz, marcá las palabras importantes y encadená las frases con intención. Hacé pausas cortas y sostené la energía hasta el cierre, sin gritar.",
+    "scripts": [
+      "¡Pará un segundo! Si tenés una idea dando vueltas hace días, escuchá esto: hoy podés darle forma. Elegí una cosa, la más simple, y hacela ahora. ¿Tenés diez minutos? Perfecto, poné el cronómetro y dale. Cuando lo veas funcionando, vas a pensar: «¡Era por acá!». Y ahí viene lo mejor: ya tenés algo real para mostrar, mejorar y compartir. ¡Dale, arrancá con esa primera idea y contame qué salió!"
+    ]
+  },
+  {
+    "label": "Enojado / Firme",
+    "scripts": [
+      "No, así no. Ya lo hablamos varias veces y necesito que quede claro de una vez. Si acordamos una cosa, no podemos cambiarla a último momento como si no importara. Yo puedo entender un error y puedo entender un problema, pero necesito que me lo digan de frente. Lo que no voy a aceptar es enterarme después, cuando ya no hay tiempo para corregir nada.",
+      "Te lo digo con calma, pero también con mucha claridad: esto no puede seguir funcionando así. Si hay un compromiso, espero que se cumpla, y si aparece un inconveniente necesito saberlo antes, no cuando todo ya está hecho. No estoy pidiendo nada imposible. Estoy pidiendo orden, responsabilidad y que respetemos lo que acordamos desde el principio."
+    ],
+    "hint": "Firmeza y tensión controlada. No hace falta gritar.",
+    "id": "angry"
+  },
+  {
+    "label": "Íntimo / Emocional",
+    "scripts": [
+      "Hay cosas que me cuesta decir en voz alta, no porque no las sienta, sino porque a veces no encuentro la forma correcta de explicarlas. Pero hoy quería intentarlo. Para mí fue importante que estuvieras ahí, incluso en los días en los que yo no sabía muy bien qué necesitaba. Tal vez no lo digo seguido, pero lo valoro mucho más de lo que parece.",
+      "A veces miro hacia atrás y me sorprende todo lo que cambió en tan poco tiempo. Hubo momentos lindos, otros bastante difíciles, y también días en los que simplemente traté de seguir adelante. Creo que lo que más aprendí es a valorar a la gente que se queda cerca sin hacer ruido, la que escucha, acompaña y no necesita tener siempre una respuesta."
+    ],
+    "hint": "Voz más cercana, pausada y vulnerable.",
+    "id": "intimate"
+  },
+  {
+    "label": "Institucional / Profesional",
+    "scripts": [
+      "Nuestro objetivo es ofrecer una experiencia clara, consistente y fácil de utilizar en cada etapa del proceso. Trabajamos con criterios definidos, revisamos los resultados y ajustamos cada decisión cuando es necesario. La prioridad es mantener un estándar de calidad estable, reducir pasos innecesarios y permitir que cada persona pueda concentrarse en su trabajo sin tener que entender la complejidad técnica que existe detrás.",
+      "Durante los últimos meses consolidamos un proceso de trabajo orientado a mejorar la calidad y la previsibilidad de cada entrega. Esto implica revisar herramientas, documentar decisiones y medir el comportamiento de cada etapa antes de incorporarla al flujo principal. Buscamos que la tecnología acompañe el trabajo cotidiano de manera simple, confiable y transparente, sin agregar complejidad innecesaria para el usuario."
+    ],
+    "hint": "Dicción clara, ritmo estable y tono confiable.",
+    "id": "institutional"
+  },
+  {
+    "label": "Explicativo / Tutorial",
+    "scripts": [
+      "Para empezar, lo primero que tenés que hacer es elegir el archivo que querés utilizar. Una vez cargado, revisá que la vista previa sea correcta y después escribí la instrucción principal. No hace falta usar palabras técnicas; podés explicar lo que querés con una frase normal. Cuando estés conforme, iniciás el proceso y esperás a que aparezca el resultado para compararlo con la referencia original.",
+      "El proceso tiene tres pasos sencillos. Primero seleccionás el contenido de entrada. Después describís el resultado que querés obtener y, si hace falta, agregás alguna referencia adicional. Por último elegís la configuración y ejecutás la tarea. Si el primer resultado no es exactamente lo que buscabas, podés mantener los mismos archivos, cambiar solamente la instrucción y generar una nueva variante."
+    ],
+    "hint": "Claridad, pausas pedagógicas y énfasis en conceptos importantes.",
+    "id": "explanatory"
+  },
+  {
+    "label": "Suspenso / Dramático",
+    "scripts": [
+      "Al principio creyó que el ruido venía de la calle. Era apenas un golpe seco, cada varios segundos, demasiado regular para ser el viento. Apagó la televisión y esperó en silencio. El sonido volvió a escucharse, esta vez más cerca. Caminó hasta el pasillo, encendió la luz y miró hacia la puerta. Entonces entendió que los golpes no venían de afuera. Venían del otro lado de la pared.",
+      "El ascensor se detuvo entre dos pisos y las luces se apagaron por completo. Durante unos segundos no pasó nada. Después apareció una pequeña luz roja sobre el panel, aunque ese botón nunca había estado ahí. Nadie tocó nada, pero el ascensor comenzó a bajar lentamente. Pasó la planta baja, siguió descendiendo y el número del display cambió por una letra que ninguno de los dos reconoció."
+    ],
+    "hint": "Ritmo lento, silencios y tensión progresiva.",
+    "id": "suspense"
+  }
+]

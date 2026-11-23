@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clonador de voz · Estudio local</title><link rel="stylesheet" href="/studio.css"><script src="/studio.js" defer></script></head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<symbol id="wave" viewBox="0 0 24 24"><path d="M3 10v4m4-8v12m5-16v20m5-16v12m4-8v4"/></symbol>
+<symbol id="mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="13" rx="3"/><path d="M6 10v2a6 6 0 0 0 12 0v-2m-6 8v4m-4 0h8"/></symbol>
+<symbol id="text" viewBox="0 0 24 24"><path d="M4 5h16M12 5v14m-4 0h8M4 5v3m16-3v3"/></symbol>
+<symbol id="play" viewBox="0 0 24 24"><path d="M9 5v14l11-7z"/></symbol>
+<symbol id="upload" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M4 15v6h16v-6"/></symbol>
+<symbol id="star" viewBox="0 0 24 24"><path d="M12 2c1 7 3 9 10 10-7 1-9 3-10 10-1-7-3-9-10-10 7-1 9-3 10-10Z"/></symbol>
+</svg>
+<div class="shell">
+<header><div class="brand"><span class="logo"><svg><use href="#wave"/></svg></span> Estudio de voz</div><span class="local"><i></i> Qwen3-TTS 1.7B · Local</span></header>
+<nav aria-label="Herramientas" style="margin:0 0 14px"><a class="button soft" href="/reels/">Diálogos para Reels</a></nav>
+<section class="hero">
+<div><h1>Clonador<br> de <em>voz</em><span>.</span></h1><p>Convertí un texto en audio con tu voz y la intención que elegís.</p></div>
+<img src="/mic-estudio.png" alt="" width="1870" height="846">
+</section>
+<nav class="steps" aria-label="Pasos del clonador">
+<button data-step="0" aria-current="step"><span class="tile violet"><svg><use href="#mic"/></svg></span><span><small>Paso 1</small><strong>Elegí tu voz</strong></span></button>
+<button data-step="1"><span class="tile peach"><svg><use href="#text"/></svg></span><span><small>Paso 2</small><strong>Escribí tu guion</strong></span></button>
+<button data-step="2"><span class="tile mint"><svg><use href="#play"/></svg></span><span><small>Paso 3</small><strong>Escuchá el clon</strong></span></button>
+</nav>
+<main>
+<section class="workspace">
+<section data-page="0">
+<h2>Tu voz de referencia</h2>
+<p class="intro">Grabá con el micrófono o cargá un MP3, WAV o audio de WhatsApp (.ogg o .opus). Se usan los primeros 90 segundos de cada muestra nueva.</p>
+<div class="actions source">
+<button id="record" class="soft"><svg><use href="#mic"/></svg><span>Grabar lectura</span></button>
+<button class="ghost" id="uploadButton"><svg><use href="#upload"/></svg> Cargar audio</button>
+<input id="upload" type="file" accept="audio/*,.webm,.ogg,.opus,.m4a,.mp3,.amr" hidden>
+</div>
+<label for="saved">Referencias guardadas</label>
+<select id="saved"><option value="">Cargando referencias…</option></select>
+<div class="sample" id="sample" hidden><strong id="sampleName"></strong><audio id="referenceAudio" controls preload="metadata"></audio></div>
+<div class="guided"><label for="tone">Tono de la lectura</label><div class="inline"><select id="tone"></select><button class="soft" id="example">Usar ejemplo</button></div><p id="hint"></p></div>
+<div class="transcript-head"><label for="transcript">Transcripción editable</label><button class="soft" id="transcribe" disabled><svg><use href="#text"/></svg> Transcribir audio</button></div><p class="transcript-note">Revisá el texto detectado y corregí lo que haga falta antes de continuar.</p>
+<textarea id="transcript" rows="3" maxlength="12000" placeholder="Escribí lo que se escucha en el audio."></textarea>
+<div class="reference-name"><label for="referenceName">Nombre para guardar la referencia</label><input type="text" id="referenceName" maxlength="80" placeholder="Ej. Creador enérgico · toma 1"></div>
+<div class="actions foot"><button class="ghost" id="saveRef" disabled>Guardar referencia</button><button class="primary" id="continue" disabled>Continuar al guion</button></div>
+</section>
+<section data-page="1" hidden>
+<h2>¿Qué querés decir?</h2><p class="intro">Escribí el texto que va a decir la voz clonada.</p>
+<label for="script">Guion</label><textarea id="script" rows="8" maxlength="5000" placeholder="Escribí o pegá tu texto…"></textarea>
+<p id="count" class="count">0 / 5000</p>
+<div class="language"><label for="language">Idioma</label><select id="language"></select></div>
+<div class="actions foot"><button class="ghost" data-step="0">Volver a la voz</button><button class="primary" id="generate" disabled><svg><use href="#star"/></svg> Generar mi voz</button></div>
+</section>
+<section data-page="2" hidden>
+<h2>Tu voz clonada</h2><p id="resultMessage" class="intro">El audio generado aparecerá acá.</p>
+<div id="resultBox" class="result-box"><canvas id="waveform" aria-label="Forma de onda del resultado"></canvas></div>
+<audio id="resultAudio" controls hidden></audio>
+<section id="resultScript" class="result-script" aria-labelledby="resultScriptTitle" hidden>
+<h3 id="resultScriptTitle">Guion de esta toma</h3>
+<p id="resultScriptText"></p>
+</section>
+<div class="actions foot"><button class="ghost" data-step="1">Volver al guion</button><a class="button primary" id="download" download hidden>Guardar WAV</a></div>
+</section>
+<p id="status" class="status" aria-live="polite"></p>
+</section>
+<aside id="help"><div class="help-icon"><svg><use href="#star"/></svg></div><h3 id="tipTitle">La intención está en tu voz</h3><p id="tipBody">Grabá la lectura con el tono que querés reproducir. La muestra le da a Qwen el timbre y una referencia de cómo hablás.</p><div class="help-line"></div><p class="privacy">El audio y el procesamiento quedan en este equipo.</p></aside>
+</main>
+</div>
+</body></html>
