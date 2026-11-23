@@ -173,6 +173,10 @@ class Handler(BaseHTTPRequestHandler):
                 return self.send_error(404)
         elif folder == "/result" and name.startswith("clon_web_") and name.endswith(".wav"):
             file = OUTPUT / name
+        elif path == "/estudio/" and not self.server.mobile_password:
+            file = ROOT / "demo" / "index.html"
+        elif path == "/plantilla-reels.json":
+            file = ROOT / "guion-ejemplo.json"
         elif path in ("/", "/studio.css", "/studio.js", "/voz.svg", "/mic-estudio.png", "/reels.js", "/reels.css", "/reels/"):
             file = WEB / ({"/": "index.html", "/reels/": "reels.html"}.get(path, name))
         else:
@@ -311,6 +315,7 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
+    parser.add_argument("--port", type=int, default=PORT)
     parser.add_argument("--mobile-ip")
     parser.add_argument("--tls-dir", type=Path)
     args = parser.parse_args()
@@ -321,7 +326,7 @@ if __name__ == "__main__":
         scheme = "https"
         hosts = (f"{host}:{port}",)
     else:
-        host, port, scheme = "127.0.0.1", PORT, "http"
+        host, port, scheme = "127.0.0.1", args.port, "http"
         hosts = (f"127.0.0.1:{port}", f"localhost:{port}")
     with ThreadingHTTPServer((host, port), Handler) as server:
         server.allowed_hosts = hosts

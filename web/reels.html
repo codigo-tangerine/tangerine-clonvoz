@@ -6,14 +6,14 @@
 <nav class="reel-nav" aria-label="Herramientas"><a href="/">Clonador individual</a><a href="/reels/" aria-current="page">Diálogos para Reels</a></nav>
 <section class="reel-hero"><div><h1>Generar <em>guion</em></h1><p>Una voz por lote y un WAV por diálogo, listos para montar en HyperFrames.</p></div><img src="/mic-estudio.png" alt="" width="1870" height="846"></section>
 <section class="workspace reel-controls">
-<div><label for="file">Guion JSON</label><input type="file" id="file" accept=".json,application/json"><p id="fileDetail" class="count"></p></div>
+<div><label for="file">Guion JSON</label><input type="file" id="file" accept=".json,application/json"><p id="fileDetail" class="count"></p><a class="button ghost" href="/plantilla-reels.json" download="plantilla-reels.json">Descargar plantilla JSON</a></div>
 <div><label for="voice">Perfil de voz</label><select id="voice"><option value="">Elegí tu referencia</option></select><audio id="voiceAudio" controls preload="none" hidden></audio></div>
 <div><label for="language">Idioma del guion</label><select id="language"></select></div>
 <div class="output-field"><label for="output">Carpeta de salida</label><input type="text" id="output" placeholder="Se crea una carpeta nueva si lo dejás vacío" spellcheck="false"></div>
 
 <p id="status" class="status" aria-live="polite"></p>
 </section>
-<div class="actions reel-toolbar"><button class="primary" id="run" disabled>Generar guion completo</button><button class="soft" id="repeatAudio" disabled>Regenerar audio</button><button class="ghost" id="downloadAll" disabled>Descargar todos los audios</button><span id="summary"></span><span id="repeatTarget" class="count"></span></div>
+<div class="actions reel-toolbar"><button class="primary" id="run" disabled>Generar todos los diálogos</button><button class="soft" id="repeatAudio" disabled>Regenerar audio</button><button class="ghost" id="downloadAll" disabled>Descargar todos los audios</button><span id="summary" aria-live="polite"></span><span id="repeatTarget" class="count"></span></div>
 <div id="warnings" role="status" hidden></div>
 <section id="sceneList" aria-label="Diálogos del guion"></section>
 </div></body></html>
