@@ -2,9 +2,22 @@
 
 Clonador de voz local con transcripción editable y generación de un WAV por diálogo para Reels. El motor usa Qwen3-TTS 1.7B Base para clonar y Whisper Base para transcribir.
 
-## Demo visual
+## Probar la interfaz
 
-Abrí [demo/index.html](demo/index.html) directamente en un navegador. La demo unificada simula las tomas y las descargas con sonidos de prueba. La interfaz conectada al motor está en `web/`.
+Abrí [demo/index.html](demo/index.html) para explorar la interfaz. La vista estática usa audio de muestra para la síntesis. Para transcribir y clonar con los modelos, abrí el estudio desde el servidor local después de instalarlo.
+
+## Privacidad y verificación
+
+- **Audios en tu PC.** La instalación estándar escucha en `127.0.0.1`. La transcripción y la clonación se ejecutan en tu equipo. Las grabaciones, transcripciones y resultados se guardan en carpetas locales como `muestras-web/`, `referencias/`, `resultados/` y `resultados-reels/`. El uso de micrófono requiere permiso del navegador.
+- **Conexiones durante la instalación.** El archivo BAT crea `.venv` en la carpeta del proyecto. Descarga dependencias desde PyPI y PyTorch, y modelos desde Hugging Face. Esos servicios reciben la IP de conexión. Una vez descargados los modelos, el flujo normal de transcripción y síntesis funciona sin conexión.
+- **Código que podés revisar.** El ZIP contiene el código de la etiqueta de la release. Podés abrir [el BAT de instalación](INSTALAR%20EN%20WINDOWS.bat) y [el script de descarga de modelos](descargar_modelos.py) en un editor, o hacer la instalación manual con los comandos de abajo. El ZIP no incluye modelos, grabaciones ni ejecutables precompilados.
+- **Comprobá el ZIP.** Descargalo desde [GitHub Releases](https://github.com/codigo-tangerine/tangerine-clonvoz/releases/latest). Desde PowerShell, en la carpeta de descarga, ejecutá:
+
+  ```powershell
+  (Get-FileHash .\Tangerine-Clonvoz-Windows.zip -Algorithm SHA256).Hash
+  ```
+
+  Compará el resultado con el SHA-256 de esa misma release. Si difiere, descargá de nuevo desde el enlace oficial antes de ejecutar el BAT.
 
 ## Ejecutar el motor local en Windows
 
@@ -14,7 +27,7 @@ El paquete de Windows incluye el código y un asistente que instala las dependen
 - [FFmpeg](https://ffmpeg.org/download.html)
 - [Paquetes CUDA de PyTorch](https://pytorch.org/get-started/previous-versions/)
 
-1. Descargá el ZIP de [GitHub Releases](https://github.com/codigo-tangerine/tangerine-clonvoz/releases) cuando esté disponible o cloná este repositorio.
+1. Descargá el ZIP de [GitHub Releases](https://github.com/codigo-tangerine/tangerine-clonvoz/releases/latest) o cloná este repositorio.
 2. Extraé el ZIP en una carpeta donde tengas permiso de escritura y ejecutá `INSTALAR EN WINDOWS.bat`. La primera ejecución descarga varios GB.
 3. Ejecutá `ABRIR CLONADOR WEB.bat` y abrí una de las direcciones locales indicadas abajo.
 
